@@ -74,41 +74,6 @@ Nếu chỉ có 5 phút, hãy xem các phần sau trong [THEORY.md](THEORY.md):
 
 ---
 
-## Chạy lại bài lab
-
-**1. Khởi động PostGIS**
-
-```bash
-cp .env.example .env
-docker compose up -d
-```
-
-Sau khi copy, sửa mật khẩu trong file `.env`.
-
-**2. Cài thư viện Python**
-
-```bash
-pip install -r requirements.txt
-```
-
-**3. Import dữ liệu vào PostGIS**
-
-Dùng QGIS: **Database → DB Manager → Import Layer/File**, chọn `data/ocp1_4326.gpkg` và đặt tên bảng là `building_4326`. Sau đó chạy câu SQL tạo bảng `building_32648`, có trong [REPORT.md](REPORT.md) mục 2.4.
-
-**4. Chạy test**
-
-```bash
-pytest -v
-```
-
-Các test trong `test_postgis.py` sẽ **tự skip** nếu không kết nối được database.
-
-**5. Xem kết quả trên QGIS**
-
-Mở `ocp.qgz` hoặc `output/test_results.gpkg`.
-
----
-
 ## Môi trường đã dùng
 
 | Thành phần | Phiên bản |
