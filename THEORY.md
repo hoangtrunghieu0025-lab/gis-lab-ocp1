@@ -598,6 +598,8 @@ Chuẩn **OGC Simple Features** quy định thế nào là một geometry **hợ
 | Đối tượng trùng lặp | Gom nhóm theo geometry |
 | Sai kiểu, lẫn kiểu (ví dụ GeometryCollection sinh ra sau `make_valid`) | `ST_Multi`, `ST_CollectionExtract` |
 
+> **⚠️ Dữ liệu OCP1 quá sạch để kiểm chứng code làm sạch.** Kiểm tra bằng `ST_IsValid` cho thấy cả 1819 polygon đều hợp lệ, không có geometry rỗng và không có bản ghi trùng. Nếu chỉ chạy code làm sạch trên dữ liệu thật thì sẽ không có gì để sửa, nên không chứng minh được code hoạt động đúng. Vì vậy bộ test **tự thêm nhiễu** bằng cách tự tạo các ca lỗi giống hình trên, gồm bowtie, lỗ nằm ngoài, gai (spike), polygon bị bẹp, đỉnh lặp, geometry rỗng, `None` và bản ghi trùng (xem [tests/conftest.py](tests/conftest.py) và [REPORT.md](REPORT.md) mục 3.3). Dữ liệu thật chỉ dùng để kiểm tra rằng code **không làm hỏng** những geometry vốn đã hợp lệ.
+
 Lưu ý: **hợp lệ (valid)** khác với **đơn giản (simple)**. Khái niệm "simple" dùng cho đường. Một LineString tự cắt chính nó vẫn hợp lệ, chỉ là không "simple".
 
 ---

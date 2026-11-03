@@ -10,6 +10,14 @@ Bài lab gồm bốn phần: tìm hiểu các hệ tọa độ **WGS84 (EPSG:432
 | Diện tích tính trên 3857 so với giá trị chuẩn | +15,3% |
 | Cùng tòa nhà, giữa datum WGS84 và datum VN-2000 | lệch khoảng 224 m |
 
+> **⚠️ Lưu ý về dữ liệu dùng để test phần làm sạch geometry.** Dữ liệu OSM thật của OCP1 **khá sạch**: cả 1819 polygon đều có `ST_IsValid = true`, không có geometry rỗng, không có bản ghi trùng. Chạy code làm sạch trên dữ liệu này thì **không có gì để sửa**, nên không chứng minh được code đúng. Vì vậy phải **tự thêm nhiễu**, tức tự tạo các ca geometry lỗi trong [tests/conftest.py](tests/conftest.py):
+> - **4 ca không hợp lệ:** `bowtie` (tự cắt), `hole_outside` (lỗ nằm ngoài), `spike` (gai), `collapsed` (bẹp, diện tích bằng 0).
+> - **1 ca hợp lệ nhưng có đỉnh lặp:** `repeated`.
+> - **1 ca chuẩn:** `ok`.
+> - **3 dòng nhiễu thêm:** geometry rỗng, giá trị `None`, và một bản sao của `ok` bắt đầu từ đỉnh khác.
+>
+> Các ca này được đặt ngay trong khu OCP1 (hệ EPSG:32648), nên mở `output/test_results.gpkg` trên QGIS sẽ thấy trực tiếp kết quả trước và sau khi làm sạch. Code làm sạch cũng được chạy trên dữ liệu thật để kiểm tra rằng nó **không làm hỏng** dữ liệu vốn đã hợp lệ (trước 1819, sau 1819).
+
 ---
 
 ## Thứ tự đọc gợi ý (dành cho mentor)
