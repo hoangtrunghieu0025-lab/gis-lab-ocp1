@@ -44,8 +44,6 @@ Nếu chỉ có 5 phút, hãy xem các phần sau trong [THEORY.md](THEORY.md):
 ├── THEORY.md               ← báo cáo lý thuyết
 ├── REPORT.md               ← báo cáo thực hành (import, CRS, test)
 ├── TASK.md                 ← mô tả nhiệm vụ
-├── REPORT_OUTLINE.md       ← khung báo cáo ban đầu
-├── BACKLOG.md              ← kế hoạch làm lab
 │
 ├── figures/                ← hình cho THEORY.md
 │   ├── svg_*.svg           sơ đồ khái niệm

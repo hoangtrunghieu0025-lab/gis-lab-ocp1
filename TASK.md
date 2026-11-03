@@ -22,11 +22,11 @@
 - Viết báo cáo tổng hợp lý thuyết, quy trình thực hiện, kết quả test, hình ảnh minh họa trên QGIS
 
 ## Tài liệu liên quan
-- [REPORT_OUTLINE.md](REPORT_OUTLINE.md): khung báo cáo
-- [BACKLOG.md](BACKLOG.md): backlog và timeline
+- [THEORY.md](THEORY.md): báo cáo lý thuyết
+- [REPORT.md](REPORT.md): báo cáo thực hành
 
 ## Tiến độ
-- [ ] 1. Tìm hiểu lý thuyết
-- [ ] 2. Import OSM OCP1 → QGIS, PostGIS, chuyển CRS
-- [ ] 3. Test chuyển CRS, làm sạch geometry
-- [ ] 4. Báo cáo
+- [x] 1. Tìm hiểu lý thuyết
+- [x] 2. Import OSM OCP1 → QGIS, PostGIS, chuyển CRS
+- [x] 3. Test chuyển CRS, làm sạch geometry
+- [x] 4. Báo cáo
