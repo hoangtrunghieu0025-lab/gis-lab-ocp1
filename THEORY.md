@@ -159,7 +159,15 @@ Một cách khác là ghi **3 khoảng cách thẳng**, đo từ tâm ellipsoid 
 
 **Công thức chuyển từ (φ, λ, h) sang (X, Y, Z):**
 
-$$N=\frac{a}{\sqrt{1-e^2\sin^2\varphi}},\quad X=(N+h)\cos\varphi\cos\lambda,\quad Y=(N+h)\cos\varphi\sin\lambda,\quad Z=\big(N(1-e^2)+h\big)\sin\varphi$$
+```math
+N = \frac{a}{\sqrt{1 - e^2 \sin^2\varphi}}
+```
+
+```math
+X = (N + h)\cos\varphi\cos\lambda, \qquad
+Y = (N + h)\cos\varphi\sin\lambda, \qquad
+Z = \big(N(1 - e^2) + h\big)\sin\varphi
+```
 
 **Ví dụ:** đỉnh 1 của tòa Sapphire S1.12 ở OCP1 có X = −1 636 459 m, Y = +5 728 026 m, Z = +2 271 034 m. X mang dấu âm vì cos(105,94°) < 0. Việc điểm ở phía Đông hay phía Tây được thể hiện qua **dấu của Y** (sin λ).
 
@@ -333,7 +341,16 @@ Phép đổi datum được thực hiện trong **hệ XYZ** (mục 3.2): bộ t
 | Xoay | ωx, ωy, ωz | −0,00928836″; +0,01975479″; −0,00427372″ |
 | Tỉ lệ | m | +0,252906278 ppm |
 
-$$\begin{bmatrix}X_2\\Y_2\\Z_2\end{bmatrix}=\begin{bmatrix}\Delta X\\\Delta Y\\\Delta Z\end{bmatrix}+(1+m)\begin{bmatrix}1&-\omega_z&\omega_y\\\omega_z&1&-\omega_x\\-\omega_y&\omega_x&1\end{bmatrix}\begin{bmatrix}X_1\\Y_1\\Z_1\end{bmatrix}$$
+```math
+\begin{bmatrix} X_2 \\ Y_2 \\ Z_2 \end{bmatrix}
+=
+\begin{bmatrix} \Delta X \\ \Delta Y \\ \Delta Z \end{bmatrix}
++ (1+m)
+\begin{bmatrix} 1 & -\omega_z & \omega_y \\ \omega_z & 1 & -\omega_x \\ -\omega_y & \omega_x & 1 \end{bmatrix}
+\begin{bmatrix} X_1 \\ Y_1 \\ Z_1 \end{bmatrix}
+```
+
+Trong đó, (X₁, Y₁, Z₁) là tọa độ ECEF trong datum gốc, (X₂, Y₂, Z₂) là tọa độ ECEF trong datum đích. Các góc ω phải đổi từ giây cung sang radian (nhân với π / 648 000) trước khi thay vào công thức.
 
 **Độ lớn của từng nhóm:**
 - **Dịch chuyển** cỡ 40–190 m, là **thành phần chính** gây ra độ lệch.
