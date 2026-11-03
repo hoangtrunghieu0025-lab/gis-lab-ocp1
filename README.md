@@ -29,11 +29,6 @@ Bài lab gồm bốn phần: tìm hiểu các hệ tọa độ **WGS84 (EPSG:432
 | 3 | [src/](src/) và [tests/](tests/) | **Code và bộ test** (pytest) | ~15 phút |
 | 4 | [TASK.md](TASK.md) | Mô tả nhiệm vụ ban đầu | 2 phút |
 
-Nếu chỉ có 5 phút, hãy xem các phần sau trong [THEORY.md](THEORY.md):
-- **mục 4**: bảng datum × kiểu tọa độ;
-- **mục 8.2**: hình minh họa lệch datum 224 m;
-- **mục 9.1**: so sánh diện tích giữa các hệ.
-
 ---
 
 ## Cấu trúc thư mục
