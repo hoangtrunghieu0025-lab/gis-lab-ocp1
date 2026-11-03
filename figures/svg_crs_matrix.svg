@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <defs>
+    <marker id="v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#16a34a"/></marker>
+    <marker id="h" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#dc2626"/></marker>
+  </defs>
+  <text x="20" y="30" font-size="17" font-weight="600">CRS = Datum × Kiểu tọa độ — mỗi mã EPSG là một ô</text>
+  <!-- column headers -->
+  <rect x="250" y="50" width="250" height="46" rx="8" fill="#2563eb"/><text x="375" y="79" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">Datum WGS84</text>
+  <rect x="620" y="50" width="250" height="46" rx="8" fill="#ea580c"/><text x="745" y="79" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">Datum VN-2000</text>
+  <!-- row headers -->
+  <g font-weight="600">
+    <rect x="20" y="112" width="210" height="96" rx="8" fill="#f3f4f6"/><text x="34" y="150">Địa lý</text><text x="34" y="172" font-weight="400" font-size="12.5" fill="#374151">(lat, lon) — độ</text>
+    <rect x="20" y="224" width="210" height="110" rx="8" fill="#f3f4f6"/><text x="34" y="266">Chiếu phẳng</text><text x="34" y="288" font-weight="400" font-size="12.5" fill="#374151">(E, N) — mét</text>
+    <rect x="20" y="350" width="210" height="96" rx="8" fill="#f3f4f6"/><text x="34" y="388">Địa tâm</text><text x="34" y="410" font-weight="400" font-size="12.5" fill="#374151">(X, Y, Z) — mét</text>
+  </g>
+  <!-- WGS84 cells -->
+  <rect x="250" y="112" width="250" height="96" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="375" y="148" text-anchor="middle" font-size="20" font-weight="700" fill="#1e3a8a">4326</text>
+  <text x="375" y="172" text-anchor="middle" font-size="12.5" font-family="Consolas, monospace">105.9442894, 20.9965078</text>
+  <text x="375" y="192" text-anchor="middle" font-size="11.5" fill="#6b7280">GPS, OSM, lưu trữ</text>
+  <rect x="250" y="224" width="250" height="110" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="375" y="258" text-anchor="middle" font-size="20" font-weight="700" fill="#1e3a8a">32648 <tspan font-size="13" font-weight="400" fill="#6b7280">· 3857</tspan></text>
+  <text x="375" y="282" text-anchor="middle" font-size="12.5" font-family="Consolas, monospace">598144.5, 2322051.0</text>
+  <text x="375" y="302" text-anchor="middle" font-size="11.5" fill="#6b7280">UTM 48N: đo đạc</text>
+  <text x="375" y="320" text-anchor="middle" font-size="11.5" fill="#6b7280">3857: hiển thị bản đồ web</text>
+  <rect x="250" y="350" width="250" height="96" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="375" y="386" text-anchor="middle" font-size="20" font-weight="700" fill="#1e3a8a">4978</text>
+  <text x="375" y="410" text-anchor="middle" font-size="12" font-family="Consolas, monospace">−1636459, 5728026, 2271034</text>
+  <text x="375" y="430" text-anchor="middle" font-size="11.5" fill="#6b7280">tính toán quỹ đạo, đổi datum</text>
+  <!-- VN cells -->
+  <rect x="620" y="112" width="250" height="96" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="745" y="148" text-anchor="middle" font-size="20" font-weight="700" fill="#9a3412">4756</text>
+  <text x="745" y="172" text-anchor="middle" font-size="12.5" font-family="Consolas, monospace">105.9424074, 20.9974949</text>
+  <text x="745" y="192" text-anchor="middle" font-size="11.5" fill="#6b7280">hồ sơ quốc gia</text>
+  <rect x="620" y="224" width="250" height="110" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="745" y="258" text-anchor="middle" font-size="20" font-weight="700" fill="#9a3412">3405 <tspan font-size="13" font-weight="400" fill="#6b7280">· múi 3°</tspan></text>
+  <text x="745" y="282" text-anchor="middle" font-size="12.5" font-family="Consolas, monospace">597948.2, 2322159.1</text>
+  <text x="745" y="302" text-anchor="middle" font-size="11.5" fill="#6b7280">bản đồ địa hình (6°)</text>
+  <text x="745" y="320" text-anchor="middle" font-size="11.5" fill="#6b7280">địa chính theo tỉnh (3°)</text>
+  <rect x="620" y="350" width="250" height="96" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-dasharray="5 4"/>
+  <text x="745" y="392" text-anchor="middle" font-size="15" font-weight="600" fill="#9a3412">(XYZ VN-2000)</text>
+  <text x="745" y="414" text-anchor="middle" font-size="11.5" fill="#6b7280">nơi áp 7 tham số, ít dùng trực tiếp</text>
+  <!-- vertical arrows: projection -->
+  <line x1="510" y1="170" x2="510" y2="262" stroke="#16a34a" stroke-width="2.5" marker-start="url(#v)" marker-end="url(#v)"/>
+  <text x="516" y="222" fill="#166534" font-size="12">phép chiếu</text>
+  <text x="516" y="238" fill="#166534" font-size="11">không lệch vị trí</text>
+  <!-- horizontal arrows: datum shift -->
+  <line x1="503" y1="140" x2="615" y2="140" stroke="#dc2626" stroke-width="2.5" marker-start="url(#h)" marker-end="url(#h)"/>
+  <line x1="503" y1="290" x2="615" y2="290" stroke="#dc2626" stroke-width="2.5" marker-start="url(#h)" marker-end="url(#h)"/>
+  <text x="559" y="128" text-anchor="middle" fill="#991b1b" font-size="12" font-weight="600">đổi datum</text>
+  <text x="559" y="310" text-anchor="middle" fill="#991b1b" font-size="12" font-weight="600">lệch ≈ 224 m</text>
+  <text x="20" y="464" font-size="12" fill="#6b7280">Tọa độ trong các ô: cùng một điểm — đỉnh 1 tòa Sapphire S1.12, OCP1.</text>
+</svg>

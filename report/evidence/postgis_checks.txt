@@ -1,0 +1,40 @@
+-- PostGIS: bang, SRID, so dong, geometry loi
+      bang      | so_dong | srid  | invalid | empty 
+----------------+---------+-------+---------+-------
+ building_32648 |    1819 | 32648 |       0 |     0
+ building_4326  |    1819 |  4326 |       0 |     0
+(2 rows)
+
+-- Chi muc
+   tablename    |        indexname        
+----------------+-------------------------
+ building_32648 | building_32648_geom_idx
+ building_32648 | building_32648_pkey
+ building_4326  | building_4326_pkey
+ building_4326  | sidx_building_4326_geom
+(4 rows)
+
+-- Pham vi toa do building_32648 (met)
+  xmin  |  ymin   |  xmax  |  ymax   
+--------+---------+--------+---------
+ 597002 | 2320350 | 600088 | 2323391
+(1 row)
+
+-- Dien tich 3 toa chung cu lon nhat theo 4 cach tinh
+ id  | dien_tich_4326_do2 | geography_m2 | utm32648_m2 | webmerc3857_m2 | lech_32648_pct | lech_3857_pct 
+-----+--------------------+--------------+-------------+----------------+----------------+---------------
+ 542 |       0.0000002284 |       2629.5 |      2628.0 |         3031.9 |         -0.057 |          15.3
+ 161 |       0.0000002252 |       2592.0 |      2590.6 |         2989.0 |         -0.056 |          15.3
+ 136 |       0.0000002176 |       2504.9 |      2503.5 |         2888.2 |         -0.056 |          15.3
+(3 rows)
+
+-- Cac he toa do trong spatial_ref_sys
+ srid  |           ten            
+-------+--------------------------
+  3405 | VN-2000 / UTM zone 48N
+  3857 | WGS 84 / Pseudo-Mercator
+  4326 | WGS 84
+  4756 | VN-2000
+ 32648 | WGS 84 / UTM zone 48N
+(5 rows)
+

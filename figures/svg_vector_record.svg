@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <rect width="900" height="330" fill="#ffffff"/>
+  <text x="20" y="30" font-size="17" font-weight="600">Ba lớp tách biệt: định dạng file ≠ CRS ≠ thuộc tính</text>
+  <!-- file wrapper -->
+  <rect x="20" y="50" width="860" height="230" rx="14" fill="#f9fafb" stroke="#6b7280" stroke-width="2" stroke-dasharray="10 6"/>
+  <text x="38" y="76" font-weight="700" fill="#374151">VỎ — định dạng file</text>
+  <text x="200" y="76" font-size="12.5" fill="#6b7280">GeoJSON · GeoPackage · Shapefile · WKT — đổi vỏ, các con số không đổi</text>
+  <!-- attributes -->
+  <rect x="40" y="96" width="500" height="160" rx="10" fill="#fff" stroke="#d1d5db"/>
+  <text x="56" y="120" font-weight="700" fill="#374151">Thuộc tính (attributes)</text>
+  <text x="300" y="120" font-size="12" fill="#6b7280">không liên quan tới CRS</text>
+  <g font-family="Consolas, monospace" font-size="13">
+    <rect x="56" y="134" width="468" height="26" fill="#f3f4f6"/>
+    <text x="64" y="152" font-weight="700">osm_id</text><text x="170" y="152" font-weight="700">building</text><text x="280" y="152" font-weight="700">levels</text><text x="360" y="152" font-weight="700">name</text>
+    <text x="64" y="182">778191165</text><text x="170" y="182">apartments</text><text x="280" y="182">27</text><text x="360" y="182">Sapphire S1.12</text>
+    <text x="64" y="212" fill="#9ca3af">…</text><text x="170" y="212" fill="#9ca3af">…</text><text x="280" y="212" fill="#9ca3af">…</text><text x="360" y="212" fill="#9ca3af">…</text>
+  </g>
+  <text x="56" y="242" font-size="12" fill="#6b7280">OSM: mỗi tag thành một cột → ~70 cột, phần lớn là null</text>
+  <!-- geometry -->
+  <rect x="560" y="96" width="300" height="160" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="576" y="120" font-weight="700" fill="#1e40af">Hình học (geometry)</text>
+  <text x="576" y="146" font-family="Consolas, monospace" font-size="12.5">MULTIPOLYGON(((</text>
+  <text x="590" y="166" font-family="Consolas, monospace" font-size="12.5">105.9442894 20.9965078,</text>
+  <text x="590" y="186" font-family="Consolas, monospace" font-size="12.5">… ,</text>
+  <text x="590" y="206" font-family="Consolas, monospace" font-size="12.5">105.9442894 20.9965078)))</text>
+  <!-- CRS tag -->
+  <g transform="translate(690 222)">
+    <rect width="156" height="26" rx="13" fill="#dc2626"/>
+    <text x="78" y="18" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">nhãn CRS: EPSG:4326</text>
+  </g>
+  <text x="20" y="306" font-size="12.5" fill="#374151">Nhãn CRS chỉ dán lên cột geometry. GeoPackage lưu nhãn trong bảng nội bộ · Shapefile trong file .prj · EWKT ghi “SRID=4326;” · GeoJSON mặc định WGS84.</text>
+</svg>

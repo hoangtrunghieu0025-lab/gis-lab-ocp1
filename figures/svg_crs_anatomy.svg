@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <rect width="880" height="430" fill="#ffffff"/>
+  <defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#9ca3af"/></marker></defs>
+  <!-- root -->
+  <rect x="340" y="18" width="200" height="54" rx="10" fill="#111827"/>
+  <text x="440" y="42" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">CRS</text>
+  <text x="440" y="61" text-anchor="middle" fill="#d1d5db" font-size="12">vd. EPSG:32648</text>
+  <path d="M440 72 L200 110" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#m)"/>
+  <path d="M440 72 L650 110" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#m)"/>
+  <!-- datum branch -->
+  <rect x="30" y="112" width="340" height="300" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="142" font-size="17" font-weight="700" fill="#1e40af">Datum</text>
+  <text x="50" y="162" font-size="12.5" fill="#1e40af">“quả bóng nào, đặt ở đâu”</text>
+  <g font-size="13.5">
+    <rect x="50" y="180" width="300" height="48" rx="8" fill="#fff" stroke="#bfdbfe"/>
+    <text x="62" y="200" font-weight="600">Ellipsoid</text><text x="62" y="219" font-size="12" fill="#374151">a = 6 378 137 m, 1/f = 298,257223563</text>
+    <rect x="50" y="236" width="300" height="48" rx="8" fill="#fff" stroke="#bfdbfe"/>
+    <text x="62" y="256" font-weight="600">Vị trí &amp; hướng</text><text x="62" y="275" font-size="12" fill="#374151">tâm O, xoay — 7 tham số so với WGS84</text>
+    <rect x="50" y="292" width="300" height="48" rx="8" fill="#fff" stroke="#bfdbfe"/>
+    <text x="62" y="312" font-weight="600">Kinh tuyến gốc</text><text x="62" y="331" font-size="12" fill="#374151">Greenwich</text>
+    <rect x="50" y="348" width="300" height="48" rx="8" fill="#fff" stroke="#bfdbfe" stroke-dasharray="5 4"/>
+    <text x="62" y="368" font-weight="600">(Thời điểm – epoch)</text><text x="62" y="387" font-size="12" fill="#374151">chỉ cần khi đo chính xác cỡ cm</text>
+  </g>
+  <!-- representation branch -->
+  <rect x="400" y="112" width="450" height="300" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="420" y="142" font-size="17" font-weight="700" fill="#166534">Cách biểu diễn vị trí</text>
+  <text x="420" y="162" font-size="12.5" fill="#166534">“ghi vị trí bằng những con số gì”</text>
+  <g font-size="13.5">
+    <rect x="420" y="178" width="200" height="52" rx="8" fill="#fff" stroke="#bbf7d0"/>
+    <text x="432" y="198" font-weight="600">① Hệ địa lý gốc</text><text x="432" y="218" font-size="12" fill="#374151">chiếu từ EPSG:4326</text>
+    <rect x="630" y="178" width="200" height="52" rx="8" fill="#fff" stroke="#bbf7d0"/>
+    <text x="642" y="198" font-weight="600">② Phép chiếu</text><text x="642" y="218" font-size="12" fill="#374151">Transverse Mercator</text>
+    <rect x="420" y="240" width="410" height="52" rx="8" fill="#fff" stroke="#bbf7d0"/>
+    <text x="432" y="260" font-weight="600">③ Tham số phép chiếu</text><text x="432" y="280" font-size="12" fill="#374151">φ₀ = 0°, λ₀ = 105°E, k₀ = 0,9996, false E = 500 000 m, false N = 0</text>
+    <rect x="420" y="302" width="200" height="52" rx="8" fill="#fff" stroke="#bbf7d0"/>
+    <text x="432" y="322" font-weight="600">④ Kiểu + số chiều</text><text x="432" y="342" font-size="12" fill="#374151">Cartesian, 2</text>
+    <rect x="630" y="302" width="200" height="52" rx="8" fill="#fff" stroke="#bbf7d0"/>
+    <text x="642" y="322" font-weight="600">⑤ Trục</text><text x="642" y="342" font-size="12" fill="#374151">E→east (1), N→north (2), mét</text>
+    <rect x="420" y="364" width="410" height="38" rx="8" fill="#fff" stroke="#bbf7d0"/>
+    <text x="432" y="388" font-weight="600">⑥ Phạm vi sử dụng</text><text x="580" y="388" font-size="12" fill="#374151">102°E – 108°E, 0° – 84°N</text>
+  </g>
+  <text x="420" y="425" font-size="11.5" fill="#6b7280">Hệ địa lý (4326, 4756) không có ①②③ — chỉ có ④⑤⑥ đặt thẳng lên datum.</text>
+</svg>

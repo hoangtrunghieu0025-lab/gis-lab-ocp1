@@ -1,0 +1,15 @@
+# Thong tin dang nhap DB: khong commit (xem .env.example)
+.env
+
+# File tai ve tu ben ngoai (plugin QuickOSM zip)
+downloads/
+
+# Python / pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# File tam cua QGIS
+*.qgz~
+*.qgs~
+*_attachments.zip

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <rect width="900" height="220" fill="#ffffff"/>
+  <defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#374151"/></marker></defs>
+  <text x="20" y="28" font-size="17" font-weight="600">Quy trình dữ liệu trong lab</text>
+  <g font-size="13">
+    <rect x="20" y="60" width="140" height="78" rx="10" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="90" y="92" text-anchor="middle" font-weight="700">Overpass API</text><text x="90" y="112" text-anchor="middle" fill="#6b7280" font-size="12">dữ liệu OSM</text>
+    <rect x="200" y="60" width="140" height="78" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="270" y="92" text-anchor="middle" font-weight="700">QGIS</text><text x="270" y="112" text-anchor="middle" fill="#6b7280" font-size="12">lớp tạm · 4326</text>
+    <rect x="380" y="60" width="140" height="78" rx="10" fill="#fef3c7" stroke="#d97706"/>
+    <text x="450" y="92" text-anchor="middle" font-weight="700">ocp1_4326.gpkg</text><text x="450" y="112" text-anchor="middle" fill="#6b7280" font-size="12">1819 polygon</text>
+    <rect x="560" y="60" width="150" height="78" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="635" y="88" text-anchor="middle" font-weight="700">PostGIS</text><text x="635" y="108" text-anchor="middle" font-size="12" font-family="Consolas, monospace">building_4326</text><text x="635" y="126" text-anchor="middle" fill="#6b7280" font-size="12">SRID 4326</text>
+    <rect x="740" y="60" width="150" height="78" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="815" y="88" text-anchor="middle" font-weight="700">PostGIS</text><text x="815" y="108" text-anchor="middle" font-size="12" font-family="Consolas, monospace">building_32648</text><text x="815" y="126" text-anchor="middle" fill="#6b7280" font-size="12">SRID 32648</text>
+  </g>
+  <g stroke="#374151" stroke-width="2" marker-end="url(#m)">
+    <line x1="160" y1="99" x2="196" y2="99"/><line x1="340" y1="99" x2="376" y2="99"/><line x1="520" y1="99" x2="556" y2="99"/><line x1="710" y1="99" x2="736" y2="99"/>
+  </g>
+  <g font-size="11.5" fill="#374151" text-anchor="middle">
+    <text x="178" y="160">QuickOSM</text><text x="358" y="160">Save As</text><text x="538" y="160">DB Manager</text><text x="723" y="160">ST_Transform</text>
+  </g>
+  <rect x="470" y="176" width="420" height="34" rx="8" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="680" y="198" text-anchor="middle" font-size="13">→ xem trên QGIS (project CRS 32648) · test bằng GeoPandas</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <rect width="860" height="330" fill="#ffffff"/>
+  <defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#9ca3af"/></marker></defs>
+  <text x="20" y="30" font-size="17" font-weight="600">Ba công cụ, chung một nền thư viện C/C++</text>
+  <!-- tools -->
+  <g>
+    <rect x="40" y="55" width="230" height="84" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="155" y="88" text-anchor="middle" font-size="17" font-weight="700" fill="#5b21b6">GeoPandas</text>
+    <text x="155" y="110" text-anchor="middle" font-size="12.5" fill="#374151">Python · bảng dữ liệu · test</text>
+    <rect x="315" y="55" width="230" height="84" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="430" y="88" text-anchor="middle" font-size="17" font-weight="700" fill="#1e40af">PostGIS</text>
+    <text x="430" y="110" text-anchor="middle" font-size="12.5" fill="#374151">SQL · lưu trữ · truy vấn</text>
+    <rect x="590" y="55" width="230" height="84" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="705" y="88" text-anchor="middle" font-size="17" font-weight="700" fill="#166534">QGIS</text>
+    <text x="705" y="110" text-anchor="middle" font-size="12.5" fill="#374151">Desktop · xem · biên tập</text>
+  </g>
+  <!-- connectors -->
+  <g stroke="#9ca3af" stroke-width="1.6" fill="none" marker-end="url(#m)">
+    <path d="M155 139 L155 200"/><path d="M155 139 L430 200"/><path d="M155 139 L705 200"/>
+    <path d="M430 139 L155 200"/><path d="M430 139 L430 200"/><path d="M430 139 L705 200"/>
+    <path d="M705 139 L155 200"/><path d="M705 139 L430 200"/><path d="M705 139 L705 200"/>
+  </g>
+  <!-- libs -->
+  <g>
+    <rect x="40" y="204" width="230" height="96" rx="12" fill="#111827"/>
+    <text x="155" y="236" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">GEOS</text>
+    <text x="155" y="258" text-anchor="middle" fill="#d1d5db" font-size="12.5">hình học: giao, hợp, valid</text>
+    <text x="155" y="280" text-anchor="middle" fill="#9ca3af" font-size="11.5">shapely · ST_MakeValid</text>
+    <rect x="315" y="204" width="230" height="96" rx="12" fill="#111827"/>
+    <text x="430" y="236" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">PROJ</text>
+    <text x="430" y="258" text-anchor="middle" fill="#d1d5db" font-size="12.5">chuyển CRS, cơ sở dữ liệu EPSG</text>
+    <text x="430" y="280" text-anchor="middle" fill="#9ca3af" font-size="11.5">pyproj · ST_Transform</text>
+    <rect x="590" y="204" width="230" height="96" rx="12" fill="#111827"/>
+    <text x="705" y="236" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">GDAL / OGR</text>
+    <text x="705" y="258" text-anchor="middle" fill="#d1d5db" font-size="12.5">đọc/ghi file gpkg, shp, tif…</text>
+    <text x="705" y="280" text-anchor="middle" fill="#9ca3af" font-size="11.5">pyogrio · ogr2ogr</text>
+  </g>
+  <text x="20" y="322" font-size="12" fill="#6b7280">Chung thư viện nên kết quả thường khớp; chênh lệch nhỏ thường do khác phiên bản (container lab: PROJ 7.2.1, GEOS 3.9).</text>
+</svg>

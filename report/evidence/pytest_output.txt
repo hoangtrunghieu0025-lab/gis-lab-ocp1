@@ -1,0 +1,50 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0 -- C:\Python313\python.exe
+rootdir: E:\GIS
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.9.0, langsmith-0.5.1
+collecting ... collected 30 items
+
+tests/test_clean.py::test_sample_cases_are_really_invalid PASSED
+tests/test_clean.py::test_remove_empty PASSED
+tests/test_clean.py::test_fix_invalid_bowtie PASSED
+tests/test_clean.py::test_fix_invalid_keeps_valid_unchanged PASSED
+tests/test_clean.py::test_keep_polygons_from_collection PASSED
+tests/test_clean.py::test_keep_polygons_returns_none_without_area PASSED
+tests/test_clean.py::test_remove_repeated_points PASSED
+tests/test_clean.py::test_drop_duplicate_geometries PASSED
+tests/test_clean.py::test_clean_geometries_pipeline 
+{'input': 9, 'invalid_before': 4, 'removed_empty': 2, 'removed_non_polygon': 1, 'removed_duplicates': 1, 'invalid_after': 0, 'output': 5}
+PASSED
+tests/test_clean.py::test_export_for_qgis PASSED
+tests/test_crs.py::test_central_meridian_on_equator PASSED
+tests/test_crs.py::test_symmetric_about_central_meridian PASSED
+tests/test_crs.py::test_ocp1_point_matches_postgis PASSED
+tests/test_crs.py::test_round_trip[105.945-20.995] PASSED
+tests/test_crs.py::test_round_trip[102.5-8.5] PASSED
+tests/test_crs.py::test_round_trip[107.9-23.3] PASSED
+tests/test_crs.py::test_area_preserved_in_utm 
+Dien tich that: 10005.62 m², UTM: 10000 m², sai so: 0.0561%
+PASSED
+tests/test_crs.py::test_area_in_degrees_is_meaningless 
+O vuong 10 000 m² tinh tren 4326 = 8.692e-07 do²
+PASSED
+tests/test_crs.py::test_swapped_axis_is_rejected PASSED
+tests/test_crs.py::test_out_of_range_is_rejected[0-95] PASSED
+tests/test_crs.py::test_out_of_range_is_rejected[0--90.1] PASSED
+tests/test_crs.py::test_out_of_range_is_rejected[181-0] PASSED
+tests/test_crs.py::test_out_of_range_is_rejected[-180.5-0] PASSED
+tests/test_crs.py::test_reproject_requires_crs PASSED
+tests/test_crs.py::test_reproject_sets_crs PASSED
+tests/test_postgis.py::test_tables_exist_with_right_srid PASSED
+tests/test_postgis.py::test_row_counts_match PASSED
+tests/test_postgis.py::test_pyproj_matches_st_transform 
+Chenh lech lon nhat pyproj vs ST_Transform: 1.42e-09 m
+PASSED
+tests/test_postgis.py::test_real_data_after_cleaning 
+{'input': 1819, 'invalid_before': 0, 'removed_empty': 0, 'removed_non_polygon': 0, 'removed_duplicates': 0, 'invalid_after': 0, 'output': 1819}
+PASSED
+tests/test_postgis.py::test_postgis_validity_agrees_with_shapely PASSED
+
+============================= 30 passed in 1.25s ==============================

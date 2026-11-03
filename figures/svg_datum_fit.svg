@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <rect width="820" height="380" fill="#ffffff"/>
+  <defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#dc2626"/></marker></defs>
+  <text x="20" y="30" font-size="17" font-weight="600">Datum = cùng một “quả bóng” (ellipsoid), đặt ở vị trí khác nhau</text>
+  <!-- geoid / real earth (bumpy) -->
+  <path d="M410 70 C520 66 600 110 640 170 C672 220 660 280 610 320 C560 356 470 362 405 360 C330 358 250 345 205 300 C160 255 158 190 195 140 C240 85 320 72 410 70 Z"
+        fill="#fef3c7" stroke="#92400e" stroke-width="2.5"/>
+  <!-- WGS84: centered -->
+  <ellipse cx="410" cy="215" rx="232" ry="146" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="410" cy="215" r="5" fill="#2563eb"/><text x="380" y="240" fill="#2563eb" font-size="12">O WGS84</text>
+  <!-- VN-2000: shifted to hug Vietnam region (upper-right) -->
+  <ellipse cx="432" cy="198" rx="232" ry="146" fill="none" stroke="#ea580c" stroke-width="3" stroke-dasharray="9 5"/>
+  <circle cx="432" cy="198" r="5" fill="#ea580c"/><text x="442" y="192" fill="#ea580c" font-size="12">O VN-2000</text>
+  <line x1="410" y1="215" x2="429" y2="200" stroke="#dc2626" stroke-width="2" marker-end="url(#m)"/>
+  <!-- Vietnam region highlight -->
+  <path d="M592 118 C615 140 632 160 641 178" fill="none" stroke="#16a34a" stroke-width="9" stroke-linecap="round" opacity="0.55"/>
+  <text x="652" y="140" fill="#166534" font-weight="600">Việt Nam</text>
+  <text x="652" y="158" fill="#166534" font-size="12">VN-2000 ôm khít nhất ở đây</text>
+  <!-- legend -->
+  <g transform="translate(20 260)">
+    <rect width="230" height="104" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+    <rect x="14" y="14" width="34" height="14" fill="#fef3c7" stroke="#92400e"/><text x="58" y="26">Trái Đất thật (geoid)</text>
+    <line x1="14" y1="50" x2="48" y2="50" stroke="#2563eb" stroke-width="3"/><text x="58" y="55">WGS84: khớp toàn cầu</text>
+    <line x1="14" y1="78" x2="48" y2="78" stroke="#ea580c" stroke-width="3" stroke-dasharray="9 5"/><text x="58" y="83">VN-2000: dời + xoay nhẹ</text>
+  </g>
+  <g transform="translate(560 270)">
+    <rect width="245" height="94" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="12" y="22" font-weight="600" fill="#991b1b">7 tham số Helmert</text>
+    <text x="12" y="44" font-size="13">3 dịch chuyển ΔX, ΔY, ΔZ  (~40–190 m)</text>
+    <text x="12" y="64" font-size="13">3 xoay ωx, ωy, ωz  (~0,01″)</text>
+    <text x="12" y="84" font-size="13">1 tỉ lệ m  (~0,25 ppm)</text>
+  </g>
+  <text x="270" y="374" font-size="12" fill="#6b7280">(Hình minh họa, độ lệch được phóng đại rất nhiều lần)</text>
+</svg>

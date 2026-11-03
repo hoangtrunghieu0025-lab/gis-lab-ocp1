@@ -1,0 +1,18 @@
+services:
+  postgis:
+    image: postgis/postgis:17-3.5
+    container_name: ocp1-postgis
+    env_file: .env
+    ports:
+      - "${HOST_PORT:-5433}:5432"
+    volumes:
+      - ocp1_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  ocp1_pgdata:
